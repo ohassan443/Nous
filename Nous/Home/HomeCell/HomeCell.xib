@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeCell" customModule="Nous" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="325" id="3ao-kZ-GvO" customClass="HomeCell" customModule="Nous" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3ao-kZ-GvO" id="bnG-nF-UMm">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlc-FB-147">
+                        <rect key="frame" x="8" y="8" width="398" height="26.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e7Q-Th-4sO">
+                        <rect key="frame" x="0.0" y="42.5" width="414" height="238"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="238" id="Qz5-hW-1cd"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uK-WZ-Ms5">
+                        <rect key="frame" x="8" y="288.5" width="398" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="KCE-gq-dPo">
+                        <rect key="frame" x="197" y="151.5" width="20" height="20"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1uK-WZ-Ms5" firstAttribute="top" secondItem="e7Q-Th-4sO" secondAttribute="bottom" constant="8" id="0EV-3j-cUw"/>
+                    <constraint firstAttribute="trailing" secondItem="wlc-FB-147" secondAttribute="trailing" constant="8" id="2AE-Rs-8SP"/>
+                    <constraint firstItem="e7Q-Th-4sO" firstAttribute="centerX" secondItem="bnG-nF-UMm" secondAttribute="centerX" id="4CC-1j-YSV"/>
+                    <constraint firstItem="KCE-gq-dPo" firstAttribute="centerY" secondItem="e7Q-Th-4sO" secondAttribute="centerY" id="4pA-Yo-J8f"/>
+                    <constraint firstItem="wlc-FB-147" firstAttribute="top" secondItem="bnG-nF-UMm" secondAttribute="top" constant="8" id="DC2-yk-EU1"/>
+                    <constraint firstItem="1uK-WZ-Ms5" firstAttribute="leading" secondItem="bnG-nF-UMm" secondAttribute="leading" constant="8" id="FpX-fN-VBt"/>
+                    <constraint firstItem="wlc-FB-147" firstAttribute="leading" secondItem="bnG-nF-UMm" secondAttribute="leading" constant="8" id="SmV-mq-A9r"/>
+                    <constraint firstAttribute="trailing" secondItem="1uK-WZ-Ms5" secondAttribute="trailing" constant="8" id="XAI-MB-gpL"/>
+                    <constraint firstItem="KCE-gq-dPo" firstAttribute="centerX" secondItem="e7Q-Th-4sO" secondAttribute="centerX" id="Xx5-I5-XaD"/>
+                    <constraint firstItem="e7Q-Th-4sO" firstAttribute="width" secondItem="bnG-nF-UMm" secondAttribute="width" id="dfS-05-wZD"/>
+                    <constraint firstItem="e7Q-Th-4sO" firstAttribute="top" secondItem="wlc-FB-147" secondAttribute="bottom" constant="8" id="dgj-wW-lCg"/>
+                    <constraint firstAttribute="bottom" secondItem="1uK-WZ-Ms5" secondAttribute="bottom" constant="16" id="qfr-3V-upZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="1uK-WZ-Ms5" id="EKm-mn-ejX"/>
+                <outlet property="imageViewActivityIndicator" destination="KCE-gq-dPo" id="ktj-5k-CYy"/>
+                <outlet property="imageViewOutlet" destination="e7Q-Th-4sO" id="Zew-RC-rih"/>
+                <outlet property="titleLabel" destination="wlc-FB-147" id="vgW-Ej-Kdq"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="55.245535714285715"/>
+        </tableViewCell>
+    </objects>
+</document>
