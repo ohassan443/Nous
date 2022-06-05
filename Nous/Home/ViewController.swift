@@ -45,7 +45,9 @@ class ViewController: UIViewController {
 		tableViewOutlet.delegate = self
 		tableViewOutlet.dataSource = self
 		tableViewOutlet.separatorStyle = .none
+		tableViewOutlet.keyboardDismissMode = .onDrag
 		searchBar.delegate = self
+
 
 
 		viewModel.$menuItems.sink { [weak self] items in
@@ -129,7 +131,5 @@ extension ViewController : UISearchBarDelegate {
 	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 		searchBar.resignFirstResponder()
 	}
-	func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-		searchBar.resignFirstResponder()
-	}
+
 }
