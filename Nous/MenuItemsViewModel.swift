@@ -58,7 +58,7 @@ class MenuItemsViewModel :ObservableObject{
 			menuItemsRepo.loadData( onComplete: {[weak self]
 				response in
 				guard let self = self else{return}
-				DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+				DispatchQueue.main.async {
 					switch response{
 					case .success(items: let loadedItems):
 						self.menuItems = .loaded(result: .success(loadedItems))
@@ -68,7 +68,7 @@ class MenuItemsViewModel :ObservableObject{
 
 
 					}
-				})
+				}
 			})
 		}
 
